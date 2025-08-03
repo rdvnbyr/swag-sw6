@@ -18,3 +18,8 @@
 /install.lock
 public/asset-manifest.json
 ###< shopware/core ###
+
+###> environment ###
+.env
+.env.*
+###< environment ###
