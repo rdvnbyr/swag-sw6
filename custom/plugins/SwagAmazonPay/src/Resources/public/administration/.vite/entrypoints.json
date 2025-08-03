@@ -1,0 +1,25 @@
+{
+  "base": "/bundles/swagamazonpay/administration/",
+  "entryPoints": {
+    "swag-amazon-pay": {
+      "css": [
+        "/bundles/swagamazonpay/administration/assets/swag-amazon-pay-CZaR9lxl.css"
+      ],
+      "dynamic": [],
+      "js": [
+        "/bundles/swagamazonpay/administration/assets/swag-amazon-pay-CFjsWssk.js"
+      ],
+      "legacy": false,
+      "preload": []
+    }
+  },
+  "legacy": false,
+  "metadatas": {},
+  "version": [
+    "7.1.0",
+    7,
+    1,
+    0
+  ],
+  "viteServer": null
+}

@@ -1,0 +1,23 @@
+{
+  "main.js": {
+    "file": "assets/sendcloud-shipping-Bp8cejdh.js",
+    "name": "sendcloud-shipping",
+    "src": "main.js",
+    "isEntry": true,
+    "css": [
+      "assets/sendcloud-shipping-BnbdmFTj.css"
+    ],
+    "assets": [
+      "assets/Beatrice-Medium-AgIeaYMl.woff2",
+      "assets/Beatrice-Medium-BhBvvuPZ.woff"
+    ]
+  },
+  "module/sendcloud-shipping/fonts/Beatrice-Medium.woff": {
+    "file": "assets/Beatrice-Medium-BhBvvuPZ.woff",
+    "src": "module/sendcloud-shipping/fonts/Beatrice-Medium.woff"
+  },
+  "module/sendcloud-shipping/fonts/Beatrice-Medium.woff2": {
+    "file": "assets/Beatrice-Medium-AgIeaYMl.woff2",
+    "src": "module/sendcloud-shipping/fonts/Beatrice-Medium.woff2"
+  }
+}

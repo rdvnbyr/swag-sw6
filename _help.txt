@@ -1,0 +1,20 @@
+# Shopware console commands
+ddev php bin/console cache:clear
+ddev php bin/console system:update:prepare
+ddev php bin/console database:migrate
+ddev php bin/console theme:compile
+
+# Composer commands
+ddev composer install
+ddev composer update
+ddev composer require [package]
+
+# Access the web container
+ddev ssh
+
+# View logs
+ddev logs
+
+# Start/stop DDEV
+ddev start
+ddev stop

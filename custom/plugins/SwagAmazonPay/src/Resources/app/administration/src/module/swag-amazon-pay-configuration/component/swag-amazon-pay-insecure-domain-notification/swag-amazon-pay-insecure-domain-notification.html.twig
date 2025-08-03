@@ -1,0 +1,36 @@
+{% block swag_amazon_pay_configiguration_component_insecure_domain_notification %}
+    <div>
+        {% block swag_amazon_pay_configiguration_component_insecure_domain_notification_info %}
+        <mt-banner
+            v-if="!salesChannelId"
+            variant="info"
+            :title="$tc('global.default.info')"
+            :showIcon="true"
+            :closable="false"
+        >
+            {{ $tc('swag-amazon-pay-configuration.insecureDomainNotification.general') }}
+        </mt-banner>
+        {% endblock %}
+
+        {% block swag_amazon_pay_configiguration_component_insecure_domain_notification_warning %}
+        <mt-banner
+            v-if="hasInsecureDomains"
+            variant="attention"
+            :title="$tc('global.default.info')"
+            :showIcon="true"
+            :closable="false"
+        >
+            <div class="swag-amazon-pay-configuration-text">
+                {{ $tc('swag-amazon-pay-configuration.insecureDomainNotification.salesChannel') }}
+                {% block swag_amazon_pay_configiguration_component_insecure_domain_notification_warning_domains %}
+                <ul>
+                    <li v-for="item in insecureDomains[salesChannelId]">
+                                {{ item }}
+                            </li>
+                </ul>
+                {% endblock %}
+            </div>
+        </mt-banner>
+        {% endblock %}
+    </div>
+{% endblock %}

@@ -1,0 +1,11 @@
+{
+  "main.js": {
+    "file": "assets/swag-amazon-pay-CFjsWssk.js",
+    "name": "swag-amazon-pay",
+    "src": "main.js",
+    "isEntry": true,
+    "css": [
+      "assets/swag-amazon-pay-CZaR9lxl.css"
+    ]
+  }
+}

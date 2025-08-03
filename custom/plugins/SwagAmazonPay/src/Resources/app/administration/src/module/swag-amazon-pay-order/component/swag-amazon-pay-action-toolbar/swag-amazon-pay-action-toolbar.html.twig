@@ -1,0 +1,58 @@
+{% block swag_amazon_pay_order_component_action_toolbar %}
+    <sw-container
+        class="swag-amazon-pay-action-toolbar__container"
+        rows="1"
+        columns="1fr 1fr 1fr"
+        gap="10px"
+    >
+        {% block swag_amazon_pay_order_component_action_toolbar_cancel_button %}
+        <mt-button
+            size="small"
+            variant="secondary"
+            class="swag-amazon-pay-action-toolbar__button"
+            @click="updatePaymentDetails"
+            ghost
+        >
+            {{ $tc('swag-amazon-pay-order.action-toolbar.refresh') }}
+        </mt-button>
+        <mt-button
+            v-if="paymentDetails.chargePermission.status === 'Chargeable'"
+            size="small"
+            variant="secondary"
+            class="swag-amazon-pay-action-toolbar__button"
+            @click="showCreateChargeModal"
+            ghost
+        >
+            {{ $tc('swag-amazon-pay-order.action-toolbar.createCharge') }}
+        </mt-button>
+        <mt-button
+            size="small"
+            class="swag-amazon-pay-action-toolbar__button"
+            :disabled="!acl.can('order.editor')"
+            v-if="!disableCancellation"
+            variant="critical"
+            @click="showCancelModal"
+            ghost
+        >
+            {{ $tc('swag-amazon-pay-order.action-toolbar.cancel') }}
+        </mt-button>
+        {% endblock %}
+
+        {% block swag_amazon_pay_order_component_action_toolbar_modals %}
+        <swag-amazon-pay-cancel-modal
+            v-if="cancelModalVisible"
+            :paymentDetails="paymentDetails"
+            @modal-close="closeModals"
+            @reload-payment="reloadPaymentDetails"
+        >
+            </swag-amazon-pay-cancel-modal>
+        <swag-amazon-pay-create-charge-modal
+            v-if="createChargeModalVisible"
+            :paymentDetails="paymentDetails"
+            @modal-close="closeModals"
+            @reload-payment="reloadPaymentDetails"
+        >
+            </swag-amazon-pay-create-charge-modal>
+        {% endblock %}
+    </sw-container>
+{% endblock %}

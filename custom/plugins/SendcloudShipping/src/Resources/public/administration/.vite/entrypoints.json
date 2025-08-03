@@ -1,0 +1,25 @@
+{
+  "base": "/bundles/sendcloudshipping/administration/",
+  "entryPoints": {
+    "sendcloud-shipping": {
+      "css": [
+        "/bundles/sendcloudshipping/administration/assets/sendcloud-shipping-BnbdmFTj.css"
+      ],
+      "dynamic": [],
+      "js": [
+        "/bundles/sendcloudshipping/administration/assets/sendcloud-shipping-Bp8cejdh.js"
+      ],
+      "legacy": false,
+      "preload": []
+    }
+  },
+  "legacy": false,
+  "metadatas": {},
+  "version": [
+    "7.1.0",
+    7,
+    1,
+    0
+  ],
+  "viteServer": null
+}
