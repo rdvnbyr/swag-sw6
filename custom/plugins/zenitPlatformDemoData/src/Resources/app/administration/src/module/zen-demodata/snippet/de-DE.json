@@ -1,0 +1,60 @@
+{
+    "zen-demodata": {
+        "general": {
+            "menuItem": "Theme Demodaten",
+            "description": "Theme Demodaten"
+        },
+        "notification": {
+            "installed": "Demodaten erfolgreich installiert",
+            "removed": "Demodaten erfolgreich gelöscht"
+        },
+        "messages": {
+            "alert": {
+                "noTheme": "Ups! Aktuell ist noch keine Pro Version eines Zenit-Theme installiert. Du findest unsere Themes ",
+                "themeLinkTitle": "hier",
+                "themeLink": "https://store.shopware.com/de/themes/?manufacturer=7a644b73b6d1b70edc03c594685b9c53&order=recommendation&p=1&properties=7e30e0de9bc6fdb580e66bcd728485d5%7C"
+            },
+            "error": {
+                "importError": "Demodaten konnten nicht importiert werden.",
+                "deleteError": "Demodaten konnten nicht entfernt werden. Möglicherweise sind Daten in Verwendung."
+            },
+            "success": {
+                "importSuccess": "Demodaten wurden erfolgreich importiert.",
+                "deleteSuccess": "Demodaten wurden erfolgreich entfernt."
+            }
+        },
+        "elements": {
+            "tab": {
+                "header": "Demodaten importieren",
+                "description": "Hier kannst Du die Shopseiten aus unseren anschaulichen Demoshops importieren. Um diese zu bearbeiten, muss du das importierte Layout duplizieren."
+            },
+            "heading": {
+                "demoPackage": "Demopaket auswählen",
+                "dataOptions": "Daten auswählen"
+            },
+            "setDownload": {
+                "textBefore": "Du kannst dir die passende Theme-Einstellung ",
+                "linkText": "über unsere Website",
+                "linkRef": "https://www.zenit.design/#demos",
+                "textAfter": " herunterladen."
+            },
+            "button": {
+                "install": "Daten installieren",
+                "remove": "Daten entfernen"
+            },
+            "options": {
+                "homeLayout": "Startseitenlayout",
+                "productLayout1": "Produktlayout 1",
+                "productLayout2": "Produktlayout 2",
+                "productLayout3": "Produktlayout 3",
+                "productLayout4": "Produktlayout 4",
+                "productLayout5": "Produktlayout 5",
+                "categoryLayout": "Standard Kategorielayout",
+                "categoryLayoutSidebar": "Standard Kategorielayout mit Sidebar",
+                "categoryLayoutHeader": "Header Kategorielayout",
+                "categoryLayoutHeaderSidebar": "Header Kategorielayout mit Sidebar",
+                "products": "Demoprodukte"
+            }
+        }
+    }
+}

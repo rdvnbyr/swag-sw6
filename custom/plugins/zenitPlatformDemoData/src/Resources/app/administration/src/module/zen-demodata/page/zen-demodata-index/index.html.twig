@@ -1,0 +1,213 @@
+{% block zen_demodata_index %}
+    <sw-page class="zen-demodata-index">
+        {% block zen_demodata_index_toolbar %}
+        <template #smart-bar-header>
+            <h2>
+                <img
+                    v-if="!!plugin.icon"
+                    class="sw-plugin-box__icon"
+                    :src="`data:image/png;base64, ${plugin.icon}`"
+                />
+                {{ plugin.label }}
+            </h2>
+        </template>
+        {% endblock %}
+
+        {% block zen_demodata_index_content %}
+        <template #content>
+            <div class="sw-card-view">
+                <div class="sw-card-view__content">
+                    <template v-if="!themeInstalled">
+                        <mt-banner
+                            class="zen-demodata-alert"
+                            variant="attention"
+                        >
+                            <span>
+                                {{ $tc('zen-demodata.messages.alert.noTheme') }}
+                            </span>
+                            <sw-external-link
+                                class="zen-link"
+                                :href="$tc('zen-demodata.messages.alert.themeLink')"
+                                :small="false"
+                                rel="noopener"
+                            >
+                                {{ $tc('zen-demodata.messages.alert.themeLinkTitle') }}
+                            </sw-external-link>
+                        </mt-banner>
+                    </template>
+                    <mt-card
+                        v-if="themeInstalled"
+                        :isLoading="isLoading"
+                        :title="$tc('zen-demodata.elements.tab.header')"
+                        large
+                    >
+                        <sw-container columns="3fr 4fr">
+                            <sw-card-section class="zen-demodata-options">
+                                {{ $tc('zen-demodata.elements.tab.description') }}
+                                <div
+                                    class="zen-card-container-top-1 zen-card-container-bottom-3"
+                                >
+                                    {{ $tc('zen-demodata.elements.setDownload.textBefore') }}
+                                    <sw-external-link
+                                        class="zen-link"
+                                        :href="$tc('zen-demodata.elements.setDownload.linkRef')"
+                                        :small="false"
+                                        rel="noopener"
+                                    >
+                                        {{ $tc('zen-demodata.elements.setDownload.linkText') }}
+                                    </sw-external-link>
+                                    {{ $tc('zen-demodata.elements.setDownload.textAfter') }}
+                                </div>
+                                <mt-select
+                                    :label="$tc('zen-demodata.elements.heading.demoPackage')"
+                                    v-model="demoIndex"
+                                    :options="demoValues"
+                                    @update:model-value="selectDemo"
+                                ></mt-select>
+                                <div class="mt-field">
+                                    <div
+                                        class="mt-field__label"
+                                    >
+                                        <label
+                                            for="mt-field--demoIndex"
+                                        >
+                                            {{ $tc('zen-demodata.elements.heading.dataOptions') }}
+                                        </label>
+                                    </div>
+                                    <div
+                                        class="sw-grid-column zen-demodata-checkbox-section zen-bordered"
+                                    >
+                                        <mt-checkbox
+                                            class="zen-user-select-none"
+                                            v-model:checked="selected.homeLayout"
+                                            :label="$tc('zen-demodata.elements.options.homeLayout')"
+                                        ></mt-checkbox>
+                                        <mt-checkbox
+                                            class="zen-user-select-none zen-panel-divider"
+                                            v-model:checked="selected.categoryLayout"
+                                            :label="$tc('zen-demodata.elements.options.categoryLayout')"
+                                        ></mt-checkbox>
+                                        <mt-checkbox
+                                            class="zen-user-select-none"
+                                            v-model:checked="selected.categoryLayoutSidebar"
+                                            :label="$tc('zen-demodata.elements.options.categoryLayoutSidebar')"
+                                        ></mt-checkbox>
+                                        <mt-checkbox
+                                            class="zen-user-select-none"
+                                            v-model:checked="selected.categoryLayoutHeader"
+                                            :label="$tc('zen-demodata.elements.options.categoryLayoutHeader')"
+                                        ></mt-checkbox>
+                                        <mt-checkbox
+                                            class="zen-user-select-none"
+                                            v-model:checked="selected.categoryLayoutHeaderSidebar"
+                                            :label="$tc('zen-demodata.elements.options.categoryLayoutHeaderSidebar')"
+                                        ></mt-checkbox>
+                                        <mt-checkbox
+                                                class="zen-user-select-none zen-panel-divider"
+                                                v-model:checked="selected.productLayout1"
+                                                :label="$tc('zen-demodata.elements.options.productLayout1')"
+                                        ></mt-checkbox>
+                                        <mt-checkbox
+                                                class="zen-user-select-none"
+                                                v-model:checked="selected.productLayout2"
+                                                :label="$tc('zen-demodata.elements.options.productLayout2')"
+                                        ></mt-checkbox>
+                                        <mt-checkbox
+                                                class="zen-user-select-none"
+                                                v-model:checked="selected.productLayout3"
+                                                :label="$tc('zen-demodata.elements.options.productLayout3')"
+                                        ></mt-checkbox>
+                                        <mt-checkbox
+                                                class="zen-user-select-none"
+                                                v-model:checked="selected.productLayout4"
+                                                :label="$tc('zen-demodata.elements.options.productLayout4')"
+                                        ></mt-checkbox>
+                                        <mt-checkbox
+                                                class="zen-user-select-none"
+                                                v-model:checked="selected.productLayout5"
+                                                :label="$tc('zen-demodata.elements.options.productLayout5')"
+                                        ></mt-checkbox>
+                                        <mt-checkbox
+                                            class="zen-user-select-none zen-panel-divider"
+                                            v-model:checked="selected.products"
+                                            :label="$tc('zen-demodata.elements.options.products')"
+                                        ></mt-checkbox>
+                                    </div>
+                                    <div class="zen-mt-3">
+                                        <template
+                                            v-if="!themeInstalled"
+                                        >
+                                            <sw-button-process
+                                                variant="primary"
+                                                size="default"
+                                                :disabled="true"
+                                                :processSuccess="importSuccess"
+                                                class="zen-mr-1"
+                                            >
+                                                {{ $tc('zen-demodata.elements.button.install') }}
+                                            </sw-button-process>
+                                        </template>
+
+                                        <template v-else>
+                                            <sw-button-process
+                                                variant="primary"
+                                                size="default"
+                                                class="mt-button mt-button--primary mt-button--big zen-mr-1"
+                                                :processSuccess="importSuccess"
+                                                rel="noopener"
+                                                @click="installData()"
+                                            >
+                                                {{ $tc('zen-demodata.elements.button.install') }}
+                                            </sw-button-process>
+                                        </template>
+
+                                        <template
+                                            v-if="!themeInstalled"
+                                        >
+                                            <mt-button
+                                                variant="critical"
+                                                :ghost="true"
+                                                size="default"
+                                                :processSuccess="removeSuccess"
+                                                class="mt-button mt-button--critical mt-button--big"
+                                                :disabled="true"
+                                            >
+                                                {{ $tc('zen-demodata.elements.button.remove') }}
+                                            </mt-button>
+                                        </template>
+
+                                        <template v-else>
+                                            <mt-button
+                                                variant="critical"
+                                                :ghost="true"
+                                                size="default"
+                                                :processSuccess="removeSuccess"
+                                                class="mt-button mt-button--critical mt-button--big"
+                                                rel="noopener"
+                                                @click="removeData()"
+                                            >
+                                                {{ $tc('zen-demodata.elements.button.remove') }}
+                                            </mt-button>
+                                        </template>
+                                    </div>
+                                </div>
+                            </sw-card-section>
+                            <sw-card-section>
+                                <div
+                                    class="zen-demodata-preview-image-section zen-bordered"
+                                >
+                                    <img
+                                        class="zen-demodata-preview-image"
+                                        :src="assetFilter('/zenitplatformdemodata/administration/static/img/preview-images/' + previewImage + '.jpg')"
+                                        :alt="previewImage"
+                                    />
+                                </div>
+                            </sw-card-section>
+                        </sw-container>
+                    </mt-card>
+                </div>
+            </div>
+        </template>
+        {% endblock %}
+    </sw-page>
+{% endblock %}

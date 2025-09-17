@@ -1,0 +1,34 @@
+{
+  "name": "standardtheme/plugin",
+  "description": "Theme standard plugin",
+  "version": "0.0.1",
+  "type": "shopware-platform-plugin",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Ridvan Bayir",
+      "homepage": "https://github.com/rdvnbyr"
+    }
+  ],
+  "require": {
+    "shopware/core": "6.7.*"
+  },
+  "autoload": {
+    "psr-4": {
+      "StandardTheme\\": "src/"
+    }
+  },
+  "extra": {
+    "shopware-plugin-class": "StandardTheme\\StandardTheme",
+    "label": {
+      "de-DE": "Standard Theme",
+      "en-GB": "Standard Theme"
+    },
+    "description": {
+      "de-DE": "Einfaches Standard Theme Plugin",
+      "en-GB": "Simple Standard Theme Plugin"
+    },
+    "copyright": "Copyright (c) 2025 Ridvan Bayir",
+    "plugin-icon": "src/Resources/config/plugin.jpg"
+  }
+}

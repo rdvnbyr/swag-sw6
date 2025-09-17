@@ -1,0 +1,23 @@
+{
+  "name": "Standard Theme",
+  "author": "Ridvan Bayir",
+  "previewMedia": "app/storefront/dist/storefront/src/assets/plugin.jpg",
+  "views": [
+     "@Storefront",
+     "@StandardTheme",
+     "@Plugins"
+  ],
+  "style": [
+    "app/storefront/src/scss/overrides.scss",
+    "@Storefront",
+    "app/storefront/src/scss/base.scss"
+  ],
+  "script": [
+    "@Storefront",
+    "app/storefront/dist/storefront/js/standard-theme/standard-theme.js"
+  ],
+  "asset": [
+    "@Storefront",
+    "app/storefront/src/assets"
+  ]
+}

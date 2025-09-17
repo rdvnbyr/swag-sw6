@@ -1,6 +1,6 @@
 {
   "main.js": {
-    "file": "assets/swag-extension-store-BVXLweMj.js",
+    "file": "assets/swag-extension-store-CSLYi8en.js",
     "name": "swag-extension-store",
     "src": "main.js",
     "isEntry": true,
@@ -214,12 +214,12 @@
     ]
   },
   "module/sw-in-app-purchases/component/sw-in-app-purchase-checkout/index.ts": {
-    "file": "assets/index-v8hVzgit.js",
+    "file": "assets/index-Bg3llgLx.js",
     "name": "index",
     "src": "module/sw-in-app-purchases/component/sw-in-app-purchase-checkout/index.ts",
     "isDynamicEntry": true,
     "css": [
-      "assets/index-Dhlf12Oj.css"
+      "assets/index-BAvWdIly.css"
     ]
   },
   "module/sw-in-app-purchases/component/sw-in-app-purchase-price-box/index.ts": {

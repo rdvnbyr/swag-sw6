@@ -1,0 +1,100 @@
+<?xml version="1.0" ?>
+
+<container xmlns="http://symfony.com/schema/dic/services"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+
+    <services>
+        <service id="zenit\PlatformDemoData\Core\AbstractCmsDemoData" public="true">
+            <argument type="service" id="cms_page.repository"/>
+            <argument type="service" id="zenit\PlatformDemoData\Helper\DemoImageHelper"/>
+            <argument type="service" id="zenit\PlatformDemoData\Core\ProductDemoData"/>
+            <argument type="service" id="Doctrine\DBAL\Connection"/>
+        </service>
+
+        <service id="zenit\PlatformDemoData\Controller\DemoDataController" public="true">
+            <argument type="service" id="zenit\PlatformDemoData\Core\ProductDemoData"/>
+            <argument type="service" id="zenit\PlatformDemoData\Core\CmsProvider\GravityCmsDemoData"/>
+            <argument type="service" id="zenit\PlatformDemoData\Core\CmsProvider\HorizonCmsDemoData"/>
+            <argument type="service" id="zenit\PlatformDemoData\Core\CmsProvider\SphereCmsDemoData"/>
+            <argument type="service" id="zenit\PlatformDemoData\Core\CmsProvider\AtmosCmsDemoData"/>
+            <argument type="service" id="zenit\PlatformDemoData\Core\CmsProvider\StratusCmsDemoData"/>
+            <argument type="service" id="zenit\PlatformDemoData\Core\CmsProvider\CategoryCmsDemoData"/>
+            <argument type="service" id="zenit\PlatformDemoData\Core\CmsProvider\ProductCmsDemoData"/>
+        </service>
+
+        <service id="zenit\PlatformDemoData\Helper\TranslationHelper" public="true">
+            <argument type="service" id="Doctrine\DBAL\Connection"/>
+        </service>
+
+        <service id="zenit\PlatformDemoData\Helper\DemoDataFolderHelper" public="true">
+            <argument type="service" id="media_folder.repository"/>
+            <argument type="service" id="media_folder_configuration.repository"/>
+            <argument type="service" id="media_thumbnail_size.repository"/>
+            <argument type="service" id="media_folder_configuration_media_thumbnail_size.repository"/>
+        </service>
+
+        <service id="zenit\PlatformDemoData\Helper\DemoImageHelper" public="true">
+            <argument type="service" id="media.repository"/>
+            <argument type="service" id="Shopware\Core\Content\Media\File\FileSaver"/>
+            <argument type="service" id="zenit\PlatformDemoData\Helper\DemoDataFolderHelper"/>
+            <argument type="service" id="Doctrine\DBAL\Connection"/>
+        </service>
+
+        <service id="zenit\PlatformDemoData\Core\ProductDemoData" public="true">
+            <argument type="service" id="Doctrine\DBAL\Connection"/>
+            <argument type="service" id="product.repository"/>
+            <argument type="service" id="sales_channel.repository"/>
+            <argument type="service" id="zenit\PlatformDemoData\Helper\DemoImageHelper"/>
+        </service>
+
+        <service id="zenit\PlatformDemoData\Core\CmsProvider\GravityCmsDemoData" public="true">
+            <argument type="service" id="cms_page.repository"/>
+            <argument type="service" id="zenit\PlatformDemoData\Helper\DemoImageHelper"/>
+            <argument type="service" id="zenit\PlatformDemoData\Core\ProductDemoData"/>
+            <argument type="service" id="Doctrine\DBAL\Connection"/>
+        </service>
+
+        <service id="zenit\PlatformDemoData\Core\CmsProvider\HorizonCmsDemoData" public="true">
+            <argument type="service" id="cms_page.repository"/>
+            <argument type="service" id="zenit\PlatformDemoData\Helper\DemoImageHelper"/>
+            <argument type="service" id="zenit\PlatformDemoData\Core\ProductDemoData"/>
+            <argument type="service" id="Doctrine\DBAL\Connection"/>
+        </service>
+
+        <service id="zenit\PlatformDemoData\Core\CmsProvider\SphereCmsDemoData" public="true">
+            <argument type="service" id="cms_page.repository"/>
+            <argument type="service" id="zenit\PlatformDemoData\Helper\DemoImageHelper"/>
+            <argument type="service" id="zenit\PlatformDemoData\Core\ProductDemoData"/>
+            <argument type="service" id="Doctrine\DBAL\Connection"/>
+        </service>
+
+        <service id="zenit\PlatformDemoData\Core\CmsProvider\StratusCmsDemoData" public="true">
+            <argument type="service" id="cms_page.repository"/>
+            <argument type="service" id="zenit\PlatformDemoData\Helper\DemoImageHelper"/>
+            <argument type="service" id="zenit\PlatformDemoData\Core\ProductDemoData"/>
+            <argument type="service" id="Doctrine\DBAL\Connection"/>
+        </service>
+
+        <service id="zenit\PlatformDemoData\Core\CmsProvider\AtmosCmsDemoData" public="true">
+            <argument type="service" id="cms_page.repository"/>
+            <argument type="service" id="zenit\PlatformDemoData\Helper\DemoImageHelper"/>
+            <argument type="service" id="zenit\PlatformDemoData\Core\ProductDemoData"/>
+            <argument type="service" id="Doctrine\DBAL\Connection"/>
+        </service>
+
+        <service id="zenit\PlatformDemoData\Core\CmsProvider\CategoryCmsDemoData" public="true">
+            <argument type="service" id="cms_page.repository"/>
+            <argument type="service" id="zenit\PlatformDemoData\Helper\DemoImageHelper"/>
+            <argument type="service" id="zenit\PlatformDemoData\Core\ProductDemoData"/>
+            <argument type="service" id="Doctrine\DBAL\Connection"/>
+        </service>
+
+        <service id="zenit\PlatformDemoData\Core\CmsProvider\ProductCmsDemoData" public="true">
+            <argument type="service" id="cms_page.repository"/>
+            <argument type="service" id="zenit\PlatformDemoData\Helper\DemoImageHelper"/>
+            <argument type="service" id="zenit\PlatformDemoData\Core\ProductDemoData"/>
+            <argument type="service" id="Doctrine\DBAL\Connection"/>
+        </service>
+    </services>
+</container>

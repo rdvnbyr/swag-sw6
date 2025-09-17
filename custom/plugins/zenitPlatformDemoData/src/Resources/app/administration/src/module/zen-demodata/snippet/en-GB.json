@@ -1,0 +1,59 @@
+{
+    "zen-demodata": {
+        "general": {
+            "menuItem": "Theme demodata",
+            "description": "Theme demodata"
+        },
+        "notification": {
+            "installed": "Demodata have been installed",
+            "removed": "Demodata have been removed"
+        },
+        "messages": {
+            "alert": {
+                "noTheme": "Oops! There is no Pro version of a Zenit theme installed yet. You can find our themes ",
+                "themeLinkTitle": "here",
+                "themeLink": "https://store.shopware.com/en/themes/?manufacturer=7a644b73b6d1b70edc03c594685b9c53&order=recommendation&p=1&properties=7e30e0de9bc6fdb580e66bcd728485d5%7C"
+            },
+            "error": {
+                "importError": "Demodata could not be imported.",
+                "deleteError": "Demodata could not be removed. Maybe some data is in use."
+            },
+            "success": {
+                "importSuccess": "Demodata was imported successfully.",
+                "deleteSuccess": "Demodata was removed successfully."
+            }
+        },
+        "elements": {
+            "tab": {
+                "header": "Demodata import",
+                "description": "Here you can import shop pages from our awesome demo shops. To edit them you have to duplicate them first."
+            },
+            "heading": {
+                "demoPackage": "Select demopackage",
+                "dataOptions": "Select data"
+            },
+            "setDownload": {
+                "textBefore": "You can download the theme settings ",
+                "linkText": "via our website",
+                "textAfter": "."
+            },
+            "button": {
+                "install": "Install data",
+                "remove": "Remove data"
+            },
+            "options": {
+                "homeLayout": "Home layout",
+                "categoryLayout": "Default category layout",
+                "productLayout1": "Product layout 1",
+                "productLayout2": "Product layout 2",
+                "productLayout3": "Product layout 3",
+                "productLayout4": "Product layout 4",
+                "productLayout5": "Product layout 5",
+                "categoryLayoutSidebar": "Default category layout with sidebar",
+                "categoryLayoutHeader": "Header category layout",
+                "categoryLayoutHeaderSidebar": "Header category layout with sidebar",
+                "products": "Demoproducts"
+            }
+        }
+    }
+}

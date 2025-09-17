@@ -1,0 +1,43 @@
+{
+    "name": "zenit/platform-demodata",
+    "description": "Demodata for Zenit Design themes",
+    "version": "3.1.1",
+    "type": "shopware-platform-plugin",
+    "license": "proprietary",
+    "authors": [
+        {
+            "name": "Zenit Design",
+            "homepage": "https://zenit.design",
+            "role": "Manufacturer"
+        }
+    ],
+    "require": {
+        "shopware/core": "~6.7"
+    },
+    "extra": {
+        "shopware-plugin-class": "zenit\\PlatformDemoData\\zenitPlatformDemoData",
+        "plugin-icon": "src/Resources/config/plugin-icon.png",
+        "copyright": "(c) by Zenit Design",
+        "label": {
+            "de-DE": "Demodaten für Zenit Design Themes",
+            "en-GB": "Demodata for Zenit Design themes"
+        },
+        "description": {
+            "de-DE": "Dieses Plugin ermöglicht das Importieren von Vorlagen und Demodaten für Zenit Themes",
+            "en-GB": "This Plugin provides the import of presets and demodata for Zenit themes"
+        },
+        "manufacturerLink": {
+            "de-DE": "https://store.shopware.com/zenit-design.html",
+            "en-GB": "https://store.shopware.com/en/zenit-design.html"
+        },
+        "supportLink": {
+            "de-DE": "https://help.zenit.design",
+            "en-GB": "https://help.zenit.design"
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "zenit\\PlatformDemoData\\": "src/"
+        }
+    }
+}

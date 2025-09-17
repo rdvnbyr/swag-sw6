@@ -1,0 +1,25 @@
+{
+  "base": "/bundles/zenitplatformdemodata/administration/",
+  "entryPoints": {
+    "zenit-platform-demo-data": {
+      "css": [
+        "/bundles/zenitplatformdemodata/administration/assets/zenit-platform-demo-data-Bk0o5yR1.css"
+      ],
+      "dynamic": [],
+      "js": [
+        "/bundles/zenitplatformdemodata/administration/assets/zenit-platform-demo-data-RYZjmvVN.js"
+      ],
+      "legacy": false,
+      "preload": []
+    }
+  },
+  "legacy": false,
+  "metadatas": {},
+  "version": [
+    "7.1.0",
+    7,
+    1,
+    0
+  ],
+  "viteServer": null
+}

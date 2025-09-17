@@ -1,0 +1,1 @@
+console.log("StandardTheme loaded: standard-theme.js");

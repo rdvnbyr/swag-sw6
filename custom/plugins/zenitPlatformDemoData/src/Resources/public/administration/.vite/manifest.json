@@ -1,0 +1,11 @@
+{
+  "main.js": {
+    "file": "assets/zenit-platform-demo-data-RYZjmvVN.js",
+    "name": "zenit-platform-demo-data",
+    "src": "main.js",
+    "isEntry": true,
+    "css": [
+      "assets/zenit-platform-demo-data-Bk0o5yR1.css"
+    ]
+  }
+}
